@@ -3,7 +3,7 @@ CPP = g++
 
 ########################################
 CFLAGS = -fPIC -lpthread
-CPPFLAGS = -fPIC -g -w -std=c++11
+CPPFLAGS = -fPIC -g -w -std=c++11 -I/mingw64/include/opencv4
 
 LINK_FLAGS = -w -g -D__STDC_CONSTANT_MACROS
 LIBS =  -lstdc++ -lopencv_core -lopencv_objdetect -lopencv_videoio -lopencv_highgui -lopencv_imgproc \
