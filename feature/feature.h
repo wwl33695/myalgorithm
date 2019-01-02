@@ -40,6 +40,8 @@ public:
 			 const vector<DMatch>& matches,
 			 const string& saveFileName = "");   // 保存匹配结果到图片中
 
+	int getbestmatch(std::vector<cv::DMatch>& matches, float &distance);
+
 private:
 	Ptr<FeatureDetector> m_detector;
 	Ptr<DescriptorExtractor> m_extractor;

@@ -111,3 +111,19 @@ void Feature::saveMatches(const Mat& queryImage,
 	string saveMatchImgName = saveFileName + "_" + m_detectType + "_" + m_extractType + "_" + m_matchType + ".jpg";
 	imwrite(saveMatchImgName, outImage);
 }
+
+int Feature::getbestmatch(std::vector<cv::DMatch>& matches, float &distance)
+{
+	if( matches.empty() )
+		return -1;
+
+	distance = matches[0].distance;
+
+	for( auto iter : matches )
+	{
+		if( iter.distance < distance )
+			distance = iter.distance;
+	}
+
+	return 0;
+}
