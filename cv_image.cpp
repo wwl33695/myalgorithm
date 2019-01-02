@@ -261,3 +261,12 @@ int cvimage_blur_bilateral(void* handle)
 
     return 0;
 }
+
+int cvimage_drawrectangle(void* handle, int left, int right, int top, int bottom)
+{
+    cmimage_tag *inst = (cmimage_tag*)handle;
+
+    cv::rectangle(inst->origin_image, cv::Point(left, top), cv::Point(right, bottom), cv::Scalar(0, 255, 0), 2);//在result上绘制正外接矩形
+
+    return 0;
+}

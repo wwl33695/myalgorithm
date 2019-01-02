@@ -25,4 +25,6 @@ int cvimage_blur_bilateral(void* handle);
 int cvimage_blur_median(void* handle);
 int cvimage_blur_gaussian(void* handle);
 int cvimage_blur_average(void* handle);
+
+int cvimage_drawrectangle(void* handle, int left, int right, int top, int bottom);
 #endif
